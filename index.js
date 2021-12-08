@@ -10,9 +10,11 @@ function shortWords(words) {
 }
 
 function noVowel(words) {
-    // filter and replace
+    // map and filter and replace
   //  return words.filter(word => word./[a-z][aeiouy][a-z]/ )
+  return words.map((word) => {word.replace(/[a-z][aeiouy][a-z]/ig , "x")})
 }
+
 
 function longToShort(words){
     // sort 
@@ -23,6 +25,7 @@ function longToShort(words){
 
 function onlyVowelA (words) {
     //filter 
+    words.filter(word => word.includes('a' || 'A'))
 }
 
 function pluralize (words) {
@@ -31,7 +34,8 @@ function pluralize (words) {
 }
 
 function longerThanSeven (words) {
-    
+    //filter
+    return words.some(word => word.length)
 }
 
 function oddLength (words) {
@@ -41,7 +45,8 @@ function oddLength (words) {
 }
 
 function allFour (words) {
-    
+    //every 
+    return word.every(word => word.length === 4);
 }
 
 function sum(numbers){
@@ -50,6 +55,7 @@ function sum(numbers){
 }
 
 function longWords(words) {
+    //filter
     return words.filter(word => word.length < 3)
 }
 
@@ -58,6 +64,6 @@ function uppercase(words) {
 }
 
 function concatStrings(words) {
-    // reduce 
-    return words.reduce('string') => 
+    // join , reduce 
+    return words.reduce((prev, curr) => `${prev} ${curr}`)
 }

@@ -1,4 +1,4 @@
-tio# Code Challenge: Control Flow
+# Code Challenge: Control Flow
 
 ## Instructions
 
